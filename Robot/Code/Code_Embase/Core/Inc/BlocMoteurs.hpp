@@ -39,7 +39,7 @@ class BlocMoteurs
 				GPIO_TypeDef* standby_reset_port_shield_2  ,uint16_t standby_reset_pin_shield_2 ,GPIO_TypeDef* ssel_port_shield_2 , uint16_t ssel_pin_shield_2
 		);
 		~BlocMoteurs();
-
+		bool moteurs_arret;
 		/* Mouvements */
 
 		void commande_vitesses_normalisees(float vitesse_normalisee_FL, float vitesse_normalisee_FR, float vitesse_normalisee_BL, float vitesse_normalisee_BR );
@@ -98,7 +98,7 @@ class BlocMoteurs
 		void set_step_moteur(unsigned int steps, StepperMotor::direction_t dir, id_moteurs id);
 
 
-		bool moteurs_arret;
+		//bool moteurs_arret;
 
 		// vitesse_max en pps
 		unsigned int max_vitesse;
